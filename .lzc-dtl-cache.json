@@ -1,0 +1,35 @@
+{
+  "name": "Channels DVR Server",
+  "package": "cloud.lazycat.app.channels-dvr-server",
+  "description": "一个灵活且独立的DVR服务器，让您随时随地安排和观看录制内容",
+  "homepage": "https://getchannels.com",
+  "author": "channels",
+  "app_features": [
+    "background_task",
+    "gpu_accel"
+  ],
+  "subdomain": "channels-dvr-server",
+  "version": "0.0.1",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "channels-dvr_8089_8089": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_fancybits_channels-dvr_latest": {
+    "originalImage": "fancybits/channels-dvr:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/fancybits/channels-dvr:52a8ed8d2071f01d",
+    "timestamp": "2025-03-05T14:02:23.880Z"
+  },
+  "channels-dvr_volume_/channels-dvr_action": "emptyDir",
+  "channels-dvr_volume_/channels-dvr_location": "app_data",
+  "channels-dvr_volume_/shares/DVR_action": "emptyDir",
+  "channels-dvr_volume_/shares/DVR_location": "app_data"
+}

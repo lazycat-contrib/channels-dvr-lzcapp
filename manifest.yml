@@ -1,0 +1,25 @@
+lzc-sdk-version: "0.1"
+name: Channels DVR Server
+package: cloud.lazycat.app.channels-dvr-server
+version: 0.0.1
+description: 一个灵活且独立的DVR服务器，让您随时随地安排和观看录制内容
+homepage: https://getchannels.com
+author: channels
+application:
+  subdomain: channels-dvr-server
+  background_task: true
+  multi_instance: false
+  gpu_accel: true
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://channels-dvr.cloud.lazycat.app.channels-dvr-server.lzcapp:8089/
+services:
+  channels-dvr:
+    image: registry.lazycat.cloud/czyt/fancybits/channels-dvr:52a8ed8d2071f01d
+    binds:
+      - /lzcapp/var/channels-dvr:/channels-dvr
+      - /lzcapp/var/DVR:/shares/DVR
+    network_mode: host
