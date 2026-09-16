@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.channels-dvr-server
+version: 0.0.1
+name: Channels DVR Server
+description: "一个灵活且独立的DVR服务器，让您随时随地安排和观看录制内容"
+min_os_version: "1.5.0"
+homepage: https://getchannels.com
+author: channels
+locales:
+  zh:
+    description: "一个灵活且独立的DVR服务器，让您随时随地安排和观看录制内容"
+    name: Channels DVR Server
+  en:
+    description: "A flexible and standalone DVR server that lets you schedule and watch your recordings anywhere"
+    name: Channels DVR Server

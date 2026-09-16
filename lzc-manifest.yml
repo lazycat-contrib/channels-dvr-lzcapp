@@ -1,0 +1,19 @@
+application:
+  subdomain: channels-dvr-server
+  background_task: true
+  multi_instance: false
+  gpu_accel: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://channels-dvr.cloud.lazycat.app.channels-dvr-server.lzcapp:8089/
+
+services:
+  channels-dvr:
+    # upstream: fancybits/channels-dvr:latest
+    image: docker.1ms.run/fancybits/channels-dvr:latest@sha256:438e362cf739f4d002ecdcc17baee6917ecd22a8d9d4aa044288042c1039d591
+    network_mode: host
+    binds:
+      - /lzcapp/var/channels-dvr:/channels-dvr
+      - /lzcapp/var/DVR:/shares/DVR
