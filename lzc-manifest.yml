@@ -12,7 +12,7 @@ application:
 services:
   channels-dvr:
     # upstream: fancybits/channels-dvr:latest
-    image: docker.1ms.run/fancybits/channels-dvr:latest@sha256:438e362cf739f4d002ecdcc17baee6917ecd22a8d9d4aa044288042c1039d591
+    image: docker.1ms.run/fancybits/channels-dvr:latest@sha256:a50536a66ed46baf78b6eeab2aefc633c924c5fccb9b489d5307c9df80975c00
     network_mode: host
     binds:
       - /lzcapp/var/channels-dvr:/channels-dvr
