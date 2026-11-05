@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.channels-dvr-server
-version: 0.0.1
+version: 0.0.2
 name: Channels DVR Server
 description: "一个灵活且独立的DVR服务器，让您随时随地安排和观看录制内容"
 min_os_version: "1.5.0"

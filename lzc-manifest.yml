@@ -8,11 +8,10 @@ application:
   upstreams:
     - location: /
       backend: http://channels-dvr.cloud.lazycat.app.channels-dvr-server.lzcapp:8089/
-
 services:
   channels-dvr:
-    # upstream: fancybits/channels-dvr:latest
-    image: docker.1ms.run/fancybits/channels-dvr:latest@sha256:a50536a66ed46baf78b6eeab2aefc633c924c5fccb9b489d5307c9df80975c00
+    # upstream: fancybits/channels-dvr:latest@sha256:b153a5165e6cfcdb715dbeb6495b5c4492baf09b3fc6dd6a639701ef831c22fe
+    image: docker.1ms.run/fancybits/channels-dvr:latest@sha256:b153a5165e6cfcdb715dbeb6495b5c4492baf09b3fc6dd6a639701ef831c22fe
     network_mode: host
     binds:
       - /lzcapp/var/channels-dvr:/channels-dvr
